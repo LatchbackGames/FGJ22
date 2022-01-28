@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class WarpDisableTrigger : MonoBehaviour
@@ -14,13 +15,13 @@ public class WarpDisableTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Entered Trigger");
-        switchWorld.CanWarp = false;
+        if(other.CompareTag("Player"))
+            switchWorld.CanWarp = false;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exited Trigger");
-        switchWorld.CanWarp = true;
+        if(other.CompareTag("Player"))
+            switchWorld.CanWarp = true;
     }
 }
