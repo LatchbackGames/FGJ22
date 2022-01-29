@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     Vector2 movement;
     private float moveX = 1;
     private float dir = 0;
+    private AudioSource asd;
 
     // Update is called once per frame
     void Update()
@@ -40,7 +41,10 @@ public class Movement : MonoBehaviour
             animator.SetFloat("Horizontal", 0);
 
         //TODO ANIMATOR FROM TOP DOWN MOVEMENT IN UNIY VIDEO
-
+        if (animator.GetFloat("Speed") != 0)
+            GetComponent<AudioSource>().PlayOneShot();
+        
+        
     }
 
     private void FixedUpdate()
