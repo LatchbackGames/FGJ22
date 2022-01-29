@@ -25,7 +25,7 @@ public class PickUpController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.E) && pickable)
+        if (Input.GetKey(KeyCode.C) && pickable)
         {
             Debug.Log(item.name);
             // Inventory from player
