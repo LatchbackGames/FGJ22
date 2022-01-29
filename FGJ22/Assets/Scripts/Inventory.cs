@@ -6,12 +6,12 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Item item;
+    public Item currentItem;
     public static int index = 0;
 
-    public Inventory()
+    public Inventory(Item item)
     {
-        item = Item.None;
+        currentItem = item;
     }
 
     public void Start()
@@ -19,11 +19,14 @@ public class Inventory : MonoBehaviour
         GameObject.FindWithTag("Player").AddComponent<Inventory>();
     }
 
+    
+    
     public bool AddToInventory(Item item)
     {
-        if (item == Item.None)
+        // If no item add to inventory
+        if (currentItem == Item.None)
         {
-            item = this.item;
+            currentItem = item;
             return true;
         }
 

@@ -6,17 +6,16 @@ using UnityEngine;
 
 public class PickUpController : MonoBehaviour
 {
-    private GameObject player;
-    private bool pickable;
-    private Item item;
-    private PickUp text;
-    private GameObject pickup;
-
+    private GameObject player; // Player
+    private bool pickable; // If something can be picked
+    private Item item; // Item which picking
+    private PickUp text; // Interactable notification
+    private GameObject pickup; // Is the pickup object which we turn off when pickedUp
     private Inventory inventory;
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new Inventory();
+        inventory = new Inventory(Item.None); // Starting with No Items
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
         
@@ -30,7 +29,8 @@ public class PickUpController : MonoBehaviour
             // Inventory from player
             if (inventory.AddToInventory(item))
             {
-                item = item;
+                item = inventory.currentItem;
+                Debug.Log(inventory.currentItem);
                 pickup.SetActive(false); 
             }
             
@@ -41,18 +41,19 @@ public class PickUpController : MonoBehaviour
     // On Trigger add to inventory if possible
     private void OnTriggerEnter2D(Collider2D other)
     {
-        pickable = true;
+        pickable = true; // If inside trigger / pickable
         // PickUp from the pickup object
-         text = other.GetComponent<PickUp>();
-        text.pickableText.SetActive(true);
-        pickup = other.gameObject;
+        item = other.GetComponent<PickUp>().item; // For Item.Bucket etc.
+        text = other.GetComponent<PickUp>(); // GetText from child
+        text.pickableText.SetActive(true); // Di
+        pickup = other.gameObject; // initializing pickup to be able to set non active
 
 
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        pickable = false;
-        text.pickableText.SetActive(false);
+        pickable = false; // If inside trigger
+        text.pickableText.SetActive(false); // Text disabled
     }
 }
