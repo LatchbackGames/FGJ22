@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 1705505026391574702}
   - component: {fileID: 1705505026391574701}
   - component: {fileID: -7654339136422809049}
+  - component: {fileID: 7456937227792837014}
   m_Layer: 0
   m_Name: PixieDust1
   m_TagString: Untagged
@@ -178,6 +179,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f630d1e9cfe37741b19836f94b0aaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &7456937227792837014
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705505026391574700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5
 --- !u!1 &1705505027027638963
 GameObject:
   m_ObjectHideFlags: 0
