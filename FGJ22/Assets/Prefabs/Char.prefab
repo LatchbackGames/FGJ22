@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7315859975312363438}
   - component: {fileID: 1914999683127285047}
   - component: {fileID: 1914999683127285041}
-  - component: {fileID: 8101506137617303386}
+  - component: {fileID: 9205864159449738899}
   m_Layer: 0
   m_Name: Char
   m_TagString: Player
@@ -135,10 +135,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10134126, y: -0.48548722}
+  m_Offset: {x: 0.07161915, y: 0.33187222}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 2.58, y: 2.58}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -146,9 +146,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2026818, y: 1.3992152}
+  m_Size: {x: 1.7971249, y: 0.5570874}
   m_EdgeRadius: 0
---- !u!114 &8101506137617303386
+--- !u!114 &9205864159449738899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214077601416070901, guid: 15237cb04b030e84a899ef968bb0cd13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -50
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 4214077601416070901, guid: 15237cb04b030e84a899ef968bb0cd13, type: 3}
       propertyPath: m_LocalRotation.w
