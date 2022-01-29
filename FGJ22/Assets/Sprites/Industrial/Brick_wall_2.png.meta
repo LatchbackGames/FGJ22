@@ -1,0 +1,393 @@
+fileFormatVersion: 2
+guid: fe8c3b8e2afc0224b9c3537c13c2dedf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3137960780275507721
+    second: Brick_wall_2_0
+  - first:
+      213: 8319428056215424336
+    second: Brick_wall_2_1
+  - first:
+      213: 2521800396995557568
+    second: Brick_wall_2_2
+  - first:
+      213: 6892573074552204851
+    second: Brick_wall_2_3
+  - first:
+      213: -732977278984347465
+    second: Brick_wall_2_4
+  - first:
+      213: 7922737674453610379
+    second: Brick_wall_2_5
+  - first:
+      213: -3005375220214178335
+    second: Brick_wall_2_6
+  - first:
+      213: 9222296439045582451
+    second: Brick_wall_2_7
+  - first:
+      213: 4260698987911546856
+    second: Brick_wall_2_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brick_wall_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -27, y: 36}
+        - {x: -32, y: 26}
+        - {x: -34, y: -13}
+        - {x: -34, y: -34}
+        - {x: -33, y: -44}
+        - {x: -32, y: -48}
+        - {x: -31, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 36}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902ed6b34b64c8b20800000000000000
+      internalID: 3137960780275507721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -25, y: 37}
+        - {x: -50, y: 36}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 37}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d83292dbb847370800000000000000
+      internalID: 8319428056215424336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 37}
+        - {x: -50, y: -50}
+        - {x: 35, y: -50}
+        - {x: 35, y: -36}
+        - {x: 31, y: 33}
+        - {x: 23, y: 37}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8fb59991c3ff220800000000000000
+      internalID: 2521800396995557568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -31, y: 50}
+        - {x: -33, y: 48}
+        - {x: -37, y: 4}
+        - {x: -37, y: -37}
+        - {x: -36, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e2b1161b657af50800000000000000
+      internalID: 6892573074552204851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: 50, y: -50}
+        - {x: 50, y: 50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0a4b95c01f3d5f0800000000000000
+      internalID: -732977278984347465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -50}
+        - {x: 37, y: -50}
+        - {x: 39, y: -32}
+        - {x: 39, y: 24}
+        - {x: 36, y: 50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f696e30f733fd60800000000000000
+      internalID: 7922737674453610379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -35, y: 50}
+        - {x: -38, y: 44}
+        - {x: -41, y: 26}
+        - {x: -41, y: 7}
+        - {x: -38, y: -30}
+        - {x: -29, y: -41}
+        - {x: -5, y: -41}
+        - {x: 50, y: -38}
+        - {x: 50, y: 50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed5f5e0923ca46d0800000000000000
+      internalID: -3005375220214178335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -38}
+        - {x: -29, y: -39}
+        - {x: 30, y: -41}
+        - {x: 50, y: -41}
+        - {x: 50, y: 50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e69aedfbd2cff70800000000000000
+      internalID: 9222296439045582451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brick_wall_2_8
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -50, y: 50}
+        - {x: -50, y: -41}
+        - {x: 21, y: -41}
+        - {x: 39, y: -36}
+        - {x: 39, y: 50}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e78555c72b012b30800000000000000
+      internalID: 4260698987911546856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e9a116da65445554b9db9ebea73d7d8a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
