@@ -27,7 +27,6 @@ public class PickUpController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && pickable)
         {
-            Debug.Log(item.name);
             // Inventory from player
             if (inventory.AddToInventory(item))
             {
@@ -45,6 +44,7 @@ public class PickUpController : MonoBehaviour
         pickable = true;
         // PickUp from the pickup object
         item = other.GetComponent<PickUp>();
+        item.pickableText.SetActive(true);
         pickup = other.gameObject;
 
 
@@ -53,5 +53,6 @@ public class PickUpController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         pickable = false;
+        item.pickableText.SetActive(false);
     }
 }

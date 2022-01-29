@@ -11,7 +11,7 @@ public class Inventory : MonoBehaviour
 
     public Inventory()
     {
-        items = new PickUp[4];
+        items = new PickUp[1];
     }
 
     public void Start()
