@@ -29,23 +29,10 @@ public class SwitchWorld : MonoBehaviour
             Debug.Log("Can't warp!");
             return;
         }
-
-        var charPos = Char.GetComponent<Transform>();
-        
-        if (charPos.position.z == World1Z)
-        {
-            charPos.position += changeWorld;
+        if(World1.activeSelf)
             SwitchWorld(World1, World2);
-            Debug.Log("switch from 1 to 2");
-        }
         else
-        {
-            charPos.position -= changeWorld;
             SwitchWorld(World2, World1);
-            Debug.Log("switch from 2 to 1");
-            
-        }
-
         void SwitchWorld(GameObject from, GameObject to)
         {
             from.SetActive(false);
