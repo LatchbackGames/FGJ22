@@ -175,8 +175,8 @@ TextureImporter:
       name: Player_walk_right_2
       rect:
         serializedVersion: 2
-        x: 458
-        y: 121
+        x: 456
+        y: 119
         width: 193
         height: 253
       alignment: 7
