@@ -5,13 +5,18 @@ using UnityEngine;
 public class SwitchWorld : MonoBehaviour
 {
     private Vector3 changeWorld = new Vector3(0, 0, 100);
-    public BoxCollider2D Char1;
-    public BoxCollider2D Char2;
+    private const float World1Z = 50;
+    public GameObject Char;
+    public GameObject World1;
+    public GameObject World2;
+    [HideInInspector]
+    public bool CanWarp;
 
     // Start is called before the first frame update
     void Start()
     {
-        Char2.enabled = false;
+        CanWarp = true;
+        World2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,20 +24,32 @@ public class SwitchWorld : MonoBehaviour
     {
         if (!Input.GetKeyDown(KeyCode.Tab))
             return;
-        var trans = GetComponent<Transform>();
-        
-        if (trans.position.z == 0)
+        if (!CanWarp)
         {
-            trans.position += changeWorld;
-            Char1.enabled = false;
-            Char2.enabled = true;
+            Debug.Log("Can't warp!");
+            return;
+        }
+
+        var charPos = Char.GetComponent<Transform>();
+        
+        if (charPos.position.z == World1Z)
+        {
+            charPos.position += changeWorld;
+            SwitchWorld(World1, World2);
+            Debug.Log("switch from 1 to 2");
         }
         else
         {
-            trans.position -= changeWorld;
-            Char1.enabled = true;
-            Char2.enabled = false;
+            charPos.position -= changeWorld;
+            SwitchWorld(World2, World1);
+            Debug.Log("switch from 2 to 1");
             
+        }
+
+        void SwitchWorld(GameObject from, GameObject to)
+        {
+            from.SetActive(false);
+            to.SetActive(true);
         }
     }
 }
