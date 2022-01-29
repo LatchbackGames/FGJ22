@@ -17,10 +17,31 @@ public class PickUp : MonoBehaviour
         id++;
     }
 }
+// Items which are needed
 public enum Item
 {
     None,
     Bucket,
     WaterBucket,
-    StepLadder
+    StepLadder,
+    Vines,
+    Knife,
+    Sap,
+    PixieDust,
+
+}
+
+// Obstacles which are needed to be crossed
+public enum Obstacles
+{
+   Unicorn,
+   WatchRoom,
+   Fire,
+   ForestFire,
+   Water,
+   Hole,
+   HeavyObject,
+   
+
+
 }
