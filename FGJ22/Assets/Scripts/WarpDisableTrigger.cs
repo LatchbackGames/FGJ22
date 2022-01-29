@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class WarpDisableTrigger : MonoBehaviour
 {
+    
+    //HOWTO Add all objects to both worlds, then copy those objects to other world under the WarpBlockers parent
+    //Add this script to all objects, remove sprites from the objects and mark them as triggers
     private SwitchWorld switchWorld;
 
     private void Start()
