@@ -8,8 +8,8 @@ public class PickUpController : MonoBehaviour
 {
     private GameObject player;
     private bool pickable;
-    private PickUp item;
-    private PickUp current;
+    private Item item;
+    private PickUp text;
     private GameObject pickup;
 
     private Inventory inventory;
@@ -30,7 +30,7 @@ public class PickUpController : MonoBehaviour
             // Inventory from player
             if (inventory.AddToInventory(item))
             {
-                current = item;
+                item = item;
                 pickup.SetActive(false); 
             }
             
@@ -43,8 +43,8 @@ public class PickUpController : MonoBehaviour
     {
         pickable = true;
         // PickUp from the pickup object
-        item = other.GetComponent<PickUp>();
-        item.pickableText.SetActive(true);
+         text = other.GetComponent<PickUp>();
+        text.pickableText.SetActive(true);
         pickup = other.gameObject;
 
 
@@ -53,6 +53,6 @@ public class PickUpController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         pickable = false;
-        item.pickableText.SetActive(false);
+        text.pickableText.SetActive(false);
     }
 }

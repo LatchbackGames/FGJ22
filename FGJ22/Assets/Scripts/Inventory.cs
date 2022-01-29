@@ -6,12 +6,12 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     // Start is called before the first frame update
-    public PickUp[] items;
+    public Item item;
     public static int index = 0;
 
     public Inventory()
     {
-        items = new PickUp[1];
+        item = Item.None;
     }
 
     public void Start()
@@ -19,28 +19,15 @@ public class Inventory : MonoBehaviour
         GameObject.FindWithTag("Player").AddComponent<Inventory>();
     }
 
-    public bool AddToInventory(PickUp item)
+    public bool AddToInventory(Item item)
     {
-        if (index < items.Length)
+        if (item == Item.None)
         {
-            items[Inventory.index++] = item;
+            item = this.item;
             return true;
         }
 
         return false;
 
-    }
-
-    public void DisplayInventory()
-    {
-        for (int i = 0; i < items.Length -1; i++)
-        {
-            if (items[i] != null)
-            {
-                Debug.Log(items[i].name);
-            }
-           
-            
-        }
     }
 }

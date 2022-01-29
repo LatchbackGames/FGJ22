@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011324593657299221}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.75, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 0
+  item: 0
   pickableText: {fileID: 3821303287499359801}
 --- !u!114 &3821303289089998208
 MonoBehaviour:
@@ -221,7 +222,7 @@ TextMesh:
   m_GameObject: {fileID: 3821303287499359801}
   m_Text: E
   m_OffsetZ: 0
-  m_CharacterSize: 0.1
+  m_CharacterSize: 0.5
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0

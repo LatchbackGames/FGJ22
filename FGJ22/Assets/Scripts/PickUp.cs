@@ -7,19 +7,20 @@ public class PickUp : MonoBehaviour
 {
     private static int id = 0;
     public int itemId;
+    public Item item;
     public GameObject pickableText;
-    [SerializeField] private Use ability;
 
-    public enum Use
+    public PickUp()
     {
-        Improve, // Bucket to Water Bucket
-        SingleUse, // Ladder etc
-        Combine, // ??
-    }
-    public PickUp(string name)
-    {
-        itemId = id;
+        item = item;
         id++;
-        this.name = name;
     }
+}
+
+public enum Item
+{
+    None,
+    Bucket,
+    WaterBucket,
+    StepLadder
 }
