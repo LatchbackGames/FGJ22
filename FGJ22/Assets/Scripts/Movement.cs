@@ -12,18 +12,43 @@ public class Movement : MonoBehaviour
     Vector2 movement;
     private float moveX = 1;
     private float dir = 0;
-    private AudioSource asd;
+    private bool toggle;
+
+    private void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
+        
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        Debug.Log("hor:" + movement.x + " Vert: " + movement.y);
+
+        var x = movement.x;
+        var y = movement.y;
+        
+        
+        
+        if (animator.GetFloat("Speed") > 0 && toggle == true){
+            Debug.Log("Playing footstep");
+            
+            FindObjectOfType<AudioManager>().Play("FootStep");
+            toggle = false;
+        }
+        if (animator.GetFloat("Speed") == 0 && toggle == false)
+        {
+            FindObjectOfType<AudioManager>().Stop("FootStep");
+            toggle = true;
+        }
         
         //animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-        if (movement.x == 0 || moveX == movement.x)
+        if (movement.x == 0 || moveX == movement.x){
             return;
+        }
         
         moveX = movement.x;
         animator.SetFloat("Direction", moveX);
@@ -37,14 +62,15 @@ public class Movement : MonoBehaviour
             animator.SetFloat("Horizontal", 1);
             
         }
-        if(animator.GetFloat("Speed") == 0)
+        if(animator.GetFloat("Speed") == 0){ 
             animator.SetFloat("Horizontal", 0);
+            
+        }
 
         //TODO ANIMATOR FROM TOP DOWN MOVEMENT IN UNIY VIDEO
-        // if (animator.GetFloat("Speed") != 0)
-        //     GetComponent<AudioSource>().PlayOneShot();
-        //
-        //
+        
+        
+           
     }
 
     private void FixedUpdate()
