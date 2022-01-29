@@ -41,10 +41,10 @@ public class Movement : MonoBehaviour
             animator.SetFloat("Horizontal", 0);
 
         //TODO ANIMATOR FROM TOP DOWN MOVEMENT IN UNIY VIDEO
-        if (animator.GetFloat("Speed") != 0)
-            GetComponent<AudioSource>().PlayOneShot();
-        
-        
+        // if (animator.GetFloat("Speed") != 0)
+        //     GetComponent<AudioSource>().PlayOneShot();
+        //
+        //
     }
 
     private void FixedUpdate()
