@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SwitchWorld : MonoBehaviour
 {
-    private Vector3 changeWorld = new Vector3(0, 0, 100);
-    private const float World1Z = 50;
-    public GameObject Char;
     public GameObject World1;
     public GameObject World2;
     [HideInInspector]
@@ -17,6 +14,7 @@ public class SwitchWorld : MonoBehaviour
     {
         CanWarp = true;
         World2.SetActive(false);
+        World1.SetActive(true);
     }
 
     // Update is called once per frame
