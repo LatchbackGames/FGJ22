@@ -8,7 +8,7 @@ public class UIController : MonoBehaviour
     public PickUpController character;
     private Item selectedItem;
     private Image img;
-    public Dictionary<Item, Sprite> ItemList;
+    public Dictionary<Item, Sprite> ItemList = new Dictionary<Item, Sprite>();
 
     public Sprite Bucket;
     public Sprite WaterBucket;
