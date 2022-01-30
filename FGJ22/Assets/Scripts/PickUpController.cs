@@ -18,6 +18,8 @@ public class PickUpController : MonoBehaviour
     void Start()
     {
         inventory = new Inventory(Item.None); // Starting with No Items
+        inventory.currentItem = Item.StepLadder;
+        item = Item.StepLadder;
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
         
@@ -37,10 +39,16 @@ public class PickUpController : MonoBehaviour
             else if (usable)
             {
                 inventory.currentItem = UseItem();
+                item = inventory.currentItem;
                 //Used item
                 Debug.Log("Current inventory is "+ inventory.currentItem);
             }
             
+        }
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            Debug.Log("Inventory " + inventory.currentItem);
         }
     }
 
@@ -73,6 +81,9 @@ public class PickUpController : MonoBehaviour
                 case Item.WaterBucket:
                     usedUp = Item.None;
                     Debug.Log("You Stopped Fires");
+                    break;
+                case Item.StepLadder:
+                    usedUp = Item.None;
                     break;
                 //TODO? yes but functionality from ui and more info
                 default:
@@ -140,6 +151,10 @@ public class PickUpController : MonoBehaviour
                 }
                 break;
             case Item.StepLadder:
+                if (x == Obstacles.Obstacle)
+                {
+                    usable = true;
+                }
                 break;
             case Item.None:
                 break;

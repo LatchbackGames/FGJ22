@@ -1325,7 +1325,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1225137665, guid: 4cb3f24b76c089746bd8fac58918b771, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4cb3f24b76c089746bd8fac58918b771, type: 3}
 --- !u!1001 &2111508687508787032
 PrefabInstance:
@@ -14453,11 +14454,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914999683127285044, guid: 635d21b820300bb4f8ad005937b691fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.18
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 1914999683127285044, guid: 635d21b820300bb4f8ad005937b691fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.21
+      value: 27.03
       objectReference: {fileID: 0}
     - target: {fileID: 1914999683127285044, guid: 635d21b820300bb4f8ad005937b691fa, type: 3}
       propertyPath: m_LocalPosition.z
