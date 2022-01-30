@@ -116,3 +116,27 @@ MonoBehaviour:
     mute: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: Fire
+    clip: {fileID: 8300000, guid: 81cb1150411244e4a8a579f78c9f12a7, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Warp
+    clip: {fileID: 8300000, guid: c410dd7727bcfde458a07da6357bbfcb, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: GameEnd
+    clip: {fileID: 8300000, guid: 54aaf73e59ea8384bb2f894986a907c5, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
