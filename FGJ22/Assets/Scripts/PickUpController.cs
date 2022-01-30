@@ -23,7 +23,7 @@ public class PickUpController : MonoBehaviour
         inventory = new Inventory(Item.None); // Starting with No Items
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
-        inventory.currentItem = item = Item.Key;
+        inventory.currentItem = item = Item.Vines; // Switch this for item
 
     }
 
@@ -83,10 +83,12 @@ public class PickUpController : MonoBehaviour
                     break;
                 case Item.PixieDust:
                     usedUp = Item.None;
+                    FindObjectOfType<AudioManager>().Play("PixieDust");
                     Debug.Log("Moved heavy boulder");
                     break;
                 //TODO
                 case Item.Vines:
+                    FindObjectOfType<AudioManager>().Play("Sap");
                     usedUp = Item.StickyVines;
                     Debug.Log("StickyVines");
                     break;
