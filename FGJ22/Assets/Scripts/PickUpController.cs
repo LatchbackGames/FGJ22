@@ -37,9 +37,17 @@ public class PickUpController : MonoBehaviour
             {
                 inventory.currentItem = UseItem();
                 //Used item
+                item = inventory.currentItem;
                 Debug.Log("Current inventory is "+ inventory.currentItem);
             }
             
+        }
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            inventory.currentItem = Item.Vines;
+            item = Item.Vines;
+            Debug.Log("Current inventory : " + inventory.currentItem);
         }
     }
 
@@ -57,7 +65,7 @@ public class PickUpController : MonoBehaviour
                     Debug.Log("Filled water bucket");
                     break;
                 case Item.Knife:
-                    usedUp = Item.Knife;
+                    usedUp = Item.Vines;
                     Debug.Log("You cut Vines");
                     break;
                 case Item.PixieDust:
@@ -72,6 +80,12 @@ public class PickUpController : MonoBehaviour
                 case Item.WaterBucket:
                     usedUp = Item.None;
                     Debug.Log("You Stopped Fires");
+                    break;
+                case Item.StickyVines:
+                    usedUp = Item.None;
+                    break;
+                case Item.Key:
+                    usedUp = Item.None;
                     break;
                 //TODO? yes but functionality from ui and more info
                 default:
@@ -141,6 +155,19 @@ public class PickUpController : MonoBehaviour
                 break;
             case Item.None:
                 break;
+            case Item.StickyVines:
+                if (x == Obstacles.Hole)
+                {
+                    usable = true;
+                    
+                }
+                break;
+            case Item.Key:
+                if (x == Obstacles.Unicorn)
+                {
+                    usable = true;
+                }
+                break;
             default:
                 break;
         }
@@ -168,10 +195,13 @@ public class PickUpController : MonoBehaviour
             if (pickable && (obs == Obstacles.None && item != Item.None))
             {
                 text.pickableText.SetActive(true); // Di
-            } else if (UsableItem(item,other.gameObject)) // 
-            {
-                text.pickableText.SetActive(true); // Di
             }
+        }
+        // If item in hand can interact with Obs
+        else if (inventory.currentItem != Item.None && UsableItem(inventory.currentItem,other.gameObject))
+        {
+            usable = true;
+            text.pickableText.SetActive(true); // Di
         }
         
         

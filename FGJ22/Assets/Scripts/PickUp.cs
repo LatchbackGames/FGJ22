@@ -6,7 +6,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     private static int id = 0; // for 
-    public int itemId; // 
+    //public int itemId; // 
     private Item pickUpItem; // As Item.None, etc.
     public Item item;
     public Obstacles obs;
@@ -35,6 +35,7 @@ public enum Item
     Knife,
     PixieDust,
     StickyVines,
+    Key,
 
 }
 
