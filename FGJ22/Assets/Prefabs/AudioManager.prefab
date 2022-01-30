@@ -68,7 +68,7 @@ MonoBehaviour:
     mute: 0
     playOnAwake: 0
     source: {fileID: 0}
-  - name: Vine
+  - name: Vines
     clip: {fileID: 8300000, guid: 6d0317c3c70bf70489cbd8f51177f016, type: 3}
     volume: 0.5
     pitch: 2
