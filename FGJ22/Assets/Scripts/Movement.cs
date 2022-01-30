@@ -25,7 +25,6 @@ public class Movement : MonoBehaviour
         
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        Debug.Log("hor:" + movement.x + " Vert: " + movement.y);
 
         var x = movement.x;
         var y = movement.y;

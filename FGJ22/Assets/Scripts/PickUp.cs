@@ -35,6 +35,7 @@ public enum Item
     Knife,
     PixieDust,
     StickyVines,
+    Key
 
 }
 
