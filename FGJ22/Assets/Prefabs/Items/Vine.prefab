@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7793497986877327454}
   - component: {fileID: 7492641140094843731}
   - component: {fileID: 7233940043747590653}
+  - component: {fileID: 1812899116}
   m_Layer: 0
   m_Name: Vine
   m_TagString: Untagged
@@ -31,6 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 474358591853814612}
+  - {fileID: 5772598619649834299}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -113,6 +115,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f630d1e9cfe37741b19836f94b0aaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1812899116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7341538909895461433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11d00affe1ff7449931b3406f7c0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: 4
+  obs: 9
+  pickableText: {fileID: 5772598619649834298}
 --- !u!1 &8870635566918068178
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &474358591853814612
 Transform:
   m_ObjectHideFlags: 0
@@ -195,3 +212,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &7233940045146974831
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7805235544097128274}
+    m_Modifications:
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780910395415730005, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+      propertyPath: m_Name
+      value: Pickable
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+--- !u!1 &5772598619649834298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3780910395415730005, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+  m_PrefabInstance: {fileID: 7233940045146974831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5772598619649834299 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3780910395415730004, guid: b22c77fdd8d25a44f9d01dc91d5cadf9, type: 3}
+  m_PrefabInstance: {fileID: 7233940045146974831}
+  m_PrefabAsset: {fileID: 0}
