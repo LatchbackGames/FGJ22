@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 2583537015573611623}
   - component: {fileID: 2583537015573611624}
   - component: {fileID: 2583537015573611625}
-  - component: {fileID: 1018052734}
   m_Layer: 0
   m_Name: HoleInTheGroundWithoutVines
   m_TagString: Untagged
@@ -165,8 +164,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1016115396338105516}
+  m_Children: []
   m_Father: {fileID: 2816411198679718569}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -247,22 +245,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.5061545, y: 1.9381561}
   m_EdgeRadius: 0
---- !u!114 &1018052734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2583537015573611626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f11d00affe1ff7449931b3406f7c0ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 0
-  item: 0
-  obs: 10
-  pickableText: {fileID: 1955904670353099723}
 --- !u!1 &6518853347965139619
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +254,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2816411198679718569}
+  - component: {fileID: 7127605132970487684}
+  - component: {fileID: 1836003016}
+  - component: {fileID: 1836003017}
   m_Layer: 0
   m_Name: HoleInTheGround1
   m_TagString: Untagged
@@ -292,19 +277,76 @@ Transform:
   m_Children:
   - {fileID: 2583537015573611623}
   - {fileID: 2583537015050313635}
+  - {fileID: 1016115396338105516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7127605132970487684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6518853347965139619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6a07d4a38d1c54cad5461bf9089ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Disables: {fileID: 2583537015573611626}
+  Enables: {fileID: 2583537015050313636}
+--- !u!114 &1836003016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6518853347965139619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11d00affe1ff7449931b3406f7c0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
+  item: 0
+  obs: 7
+  pickableText: {fileID: 1955904670353099723}
+--- !u!61 &1836003017
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6518853347965139619}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0403769, y: 0.13010311}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.669827, y: 1.9780216}
+  m_EdgeRadius: 0
 --- !u!1001 &2583537015017901555
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 2583537015573611623}
+    m_TransformParent: {fileID: 2816411198679718569}
     m_Modifications:
     - target: {fileID: 3297592240511037791, guid: e756b1c8de4eff64398ba7b0b0f6c91a, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3297592240511037791, guid: e756b1c8de4eff64398ba7b0b0f6c91a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -312,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3297592240511037791, guid: e756b1c8de4eff64398ba7b0b0f6c91a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 3297592240511037791, guid: e756b1c8de4eff64398ba7b0b0f6c91a, type: 3}
       propertyPath: m_LocalPosition.z

@@ -43,6 +43,7 @@ public class UIController : MonoBehaviour
         ItemList.Add(Item.PixieDust, PixieDust);
         ItemList.Add(Item.StickyVines, StickyVines);
         ItemList.Add(Item.Key, Key);
+        ItemList.Add(Item.Unicorn, null);
     }
 
     // Update is called once per frame

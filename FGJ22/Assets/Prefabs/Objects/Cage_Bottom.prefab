@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 753823386520811716}
   - component: {fileID: 7921891195987557656}
   - component: {fileID: 812687064}
+  - component: {fileID: 1225566310}
   m_Layer: 0
   m_Name: Cage_Bottom
   m_TagString: Untagged
@@ -127,6 +128,32 @@ MonoBehaviour:
   item: 0
   obs: 1
   pickableText: {fileID: 0}
+--- !u!61 &1225566310
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753823386520811715}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.43385172, y: 1.3828306}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 5, y: 4}
+    newSize: {x: 5, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.8677034, y: 4.598837}
+  m_EdgeRadius: 0
 --- !u!1 &753823387269690968
 GameObject:
   m_ObjectHideFlags: 0

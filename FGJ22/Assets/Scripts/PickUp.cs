@@ -35,7 +35,8 @@ public enum Item
     Knife,
     PixieDust,
     StickyVines,
-    Key
+    Key,
+    Unicorn
 
 }
 
@@ -53,5 +54,5 @@ public enum Obstacles
    HeavyObject,
    Vines,
    Obstacle,
-   
+
 }
