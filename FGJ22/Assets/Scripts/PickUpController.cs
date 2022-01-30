@@ -10,7 +10,8 @@ public class PickUpController : MonoBehaviour
     private Obstacles obs; // Obstacle tracking
     private PickUp text; // Interactable notification
     private GameObject pickup; // Is the pickup object which we turn off when pickedUp
-    private Inventory inventory;
+    [HideInInspector]
+    public Inventory inventory;
 
     private GameObject lastOther;
     // Start is called before the first frame update
