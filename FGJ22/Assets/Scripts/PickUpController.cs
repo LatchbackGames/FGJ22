@@ -6,6 +6,7 @@ public class PickUpController : MonoBehaviour
     private GameObject player; // Player
     private bool pickable; // If something can be picked
     private bool usable; // If item can be used for something
+    private bool winGame;
     private Item item; // Item which picking
     private Obstacles obs; // Obstacle tracking
     private PickUp text; // Interactable notification
@@ -13,25 +14,33 @@ public class PickUpController : MonoBehaviour
     [HideInInspector]
     public Inventory inventory;
 
+    public FadeToBlack fade;
+
     private GameObject lastOther;
     // Start is called before the first frame update
     void Start()
     {
         inventory = new Inventory(Item.None); // Starting with No Items
-        inventory.currentItem = Item.StepLadder;
-        item = Item.StepLadder;
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
-        
+        inventory.currentItem = item = Item.Key;
 
     }
 
     void Update()
     {
+        if (winGame)
+            return;
         if (Input.GetKey(KeyCode.E) && (usable || pickable))
         {
+            if (winGame)
+            {
+                
+                Debug.Log("Won The Game!");
+                fade.fadeBlack = FadeBlack.To;
+            }
             // Inventory from player
-            if (pickable)
+            else if (pickable)
             {
                 PickUpItem();
             }
@@ -59,6 +68,7 @@ public class PickUpController : MonoBehaviour
         Item usedUp = item; // which is used so like waterbucket on fire or filled bucket
         if (item != Item.None && UsableItem(item,lastOther))
         {
+            var destroyItem = true;
             switch (item)
             {
                 case Item.Bucket:
@@ -67,7 +77,8 @@ public class PickUpController : MonoBehaviour
                     Debug.Log("Filled water bucket");
                     break;
                 case Item.Knife:
-                    usedUp = Item.Knife;
+                    usedUp = Item.Vines;
+                    FindObjectOfType<AudioManager>().Play("Vines");
                     Debug.Log("You cut Vines");
                     break;
                 case Item.PixieDust:
@@ -85,7 +96,31 @@ public class PickUpController : MonoBehaviour
                     Debug.Log("You Stopped Fires");
                     break;
                 case Item.StepLadder:
+                    var obstacle = lastOther.GetComponent<Obstacle>();
+                    obstacle.Disables.SetActive(false);
+                    obstacle.Enables.SetActive(true);
+                    var trigger = lastOther.GetComponent<BoxCollider2D>();
+                    trigger.enabled = false;
+                    destroyItem = false;
                     usedUp = Item.None;
+                    break;
+                case Item.StickyVines:
+                    var stickObstacle = lastOther.GetComponent<Obstacle>();
+                    stickObstacle.Disables.SetActive(false);
+                    stickObstacle.Enables.SetActive(true);
+                    var stickTrigger = lastOther.GetComponent<BoxCollider2D>();
+                    stickTrigger.enabled = false;
+                    destroyItem = false;
+                    FindObjectOfType<AudioManager>().Play("Sap");
+                    usedUp = Item.None;
+                    break;
+                case Item.Key:
+                    FindObjectOfType<AudioManager>().Play("UseKey");
+                    usedUp = Item.None;
+                    break;
+                case Item.Unicorn:
+                    usedUp = Item.Unicorn;
+                    destroyItem = false;
                     break;
                 //TODO? yes but functionality from ui and more info
                 default:
@@ -93,7 +128,8 @@ public class PickUpController : MonoBehaviour
                     break;
                     
             }
-            pickup.SetActive(false);
+            if(destroyItem)
+                pickup.SetActive(false);
         }
 
         return usedUp;
@@ -107,6 +143,11 @@ public class PickUpController : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play(item.ToString()); //Play sound effect correctly maybe
                 item = inventory.currentItem;
                 Debug.Log(inventory.currentItem);
+                if (item == Item.Unicorn)
+                {
+                    Debug.Log("Won The Game!");
+                    fade.fadeBlack = FadeBlack.To;
+                }
                 pickup.SetActive(false); 
             }
         }
@@ -145,9 +186,9 @@ public class PickUpController : MonoBehaviour
                 {
                     usable = true;
                 }
-                    break;
+                break;
             case Item.WaterBucket:
-                if (x == Obstacles.Fire)
+                if (x == Obstacles.ForestFire)
                 {
                     usable = true;
                 }
@@ -157,6 +198,22 @@ public class PickUpController : MonoBehaviour
                 {
                     usable = true;
                 }
+                break;
+            case Item.StickyVines:
+                if (x == Obstacles.Hole)
+                {
+                    usable = true;
+                }
+                break;
+            case Item.Key:
+                if (x == Obstacles.Unicorn)
+                {
+                    usable = true;
+                }
+                break;
+            case Item.Unicorn:
+                winGame = true;
+                usable = true;
                 break;
             case Item.None:
                 break;
@@ -171,12 +228,10 @@ public class PickUpController : MonoBehaviour
     // On Trigger add to inventory if possible
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        
         pickup = other.gameObject; // initializing pickup to be able to set non active
         lastOther = other.gameObject;
         text = other.GetComponent<PickUp>(); // GetText from child
-        
+        usable = UsableItem(item, other.gameObject);
         // If player not holding anything
         if (inventory.currentItem == Item.None) 
         {
@@ -187,13 +242,14 @@ public class PickUpController : MonoBehaviour
             if (pickable && (obs == Obstacles.None && item != Item.None))
             {
                 text.pickableText.SetActive(true); // Di
-            } else if (usable)
-            {
-                text.pickableText.SetActive(true); // Di
             }
         }
-        usable = UsableItem(item, other.gameObject);
-        
+        // If item in hand can interact with Obs
+        else if (inventory.currentItem != Item.None && UsableItem(inventory.currentItem,other.gameObject))
+        {
+            usable = true;
+            text.pickableText.SetActive(true); // Di
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

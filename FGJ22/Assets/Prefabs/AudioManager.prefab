@@ -132,10 +132,26 @@ MonoBehaviour:
     mute: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: Unicorn
+    clip: {fileID: 8300000, guid: 95760adc3f81cf941be3e16c4e2ae578, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
   - name: GameEnd
     clip: {fileID: 8300000, guid: 54aaf73e59ea8384bb2f894986a907c5, type: 3}
     volume: 0.5
-    pitch: 2
+    pitch: 1
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: UseKey
+    clip: {fileID: 8300000, guid: 13265b58a4458b54c9eb843985ec69e5, type: 3}
+    volume: 0.5
+    pitch: 1
     loop: 0
     mute: 0
     playOnAwake: 0
