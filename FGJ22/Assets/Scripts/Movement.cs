@@ -11,7 +11,6 @@ public class Movement : MonoBehaviour
     public Animator animator;
     Vector2 movement;
     private float moveX = 1;
-    private float dir = 0;
     private bool toggle;
 
     private void Start()
@@ -65,8 +64,7 @@ public class Movement : MonoBehaviour
             animator.SetFloat("Horizontal", 0);
             
         }
-
-        //TODO ANIMATOR FROM TOP DOWN MOVEMENT IN UNIY VIDEO
+        
         
         
            

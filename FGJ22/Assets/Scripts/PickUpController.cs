@@ -63,6 +63,7 @@ public class PickUpController : MonoBehaviour
             {
                 case Item.Bucket:
                     usedUp = Item.WaterBucket;
+                    FindObjectOfType<AudioManager>().Play("Water");
                     Debug.Log("Filled water bucket");
                     break;
                 case Item.Knife:
@@ -80,6 +81,7 @@ public class PickUpController : MonoBehaviour
                     break;
                 case Item.WaterBucket:
                     usedUp = Item.None;
+                    FindObjectOfType<AudioManager>().Play("Fire");
                     Debug.Log("You Stopped Fires");
                     break;
                 case Item.StepLadder:
