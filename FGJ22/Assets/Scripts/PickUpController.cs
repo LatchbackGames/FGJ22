@@ -23,7 +23,7 @@ public class PickUpController : MonoBehaviour
         inventory = new Inventory(Item.None); // Starting with No Items
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
-        inventory.currentItem = item = Item.Key;
+        //inventory.currentItem = item = Item.Key;
 
     }
 
