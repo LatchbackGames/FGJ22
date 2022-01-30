@@ -104,6 +104,7 @@ public class PickUpController : MonoBehaviour
         {
             if (inventory.AddToInventory(item))
             {
+                FindObjectOfType<AudioManager>().Play(item.ToString());
                 item = inventory.currentItem;
                 Debug.Log(inventory.currentItem);
                 pickup.SetActive(false); 
