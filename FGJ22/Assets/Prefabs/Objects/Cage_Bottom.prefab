@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 753823386520811717}
   - component: {fileID: 753823386520811716}
   - component: {fileID: 7921891195987557656}
+  - component: {fileID: 812687064}
   m_Layer: 0
   m_Name: Cage_Bottom
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753823386520811715}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.62, y: 8.8, z: 498}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -110,6 +111,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.908767, y: 3.8838863}
   m_EdgeRadius: 0
+--- !u!114 &812687064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753823386520811715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11d00affe1ff7449931b3406f7c0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
+  item: 0
+  obs: 1
+  pickableText: {fileID: 0}
 --- !u!1 &753823387269690968
 GameObject:
   m_ObjectHideFlags: 0
