@@ -90,7 +90,7 @@ public class PickUpController : MonoBehaviour
         {
             if (inventory.AddToInventory(item))
             {
-                FindObjectOfType<AudioManager>().Play(item.ToString()); //Play sound effect correctly maybe
+                //FindObjectOfType<AudioManager>().Play(item.ToString()); //Play sound effect correctly maybe
                 item = inventory.currentItem;
                 Debug.Log(inventory.currentItem);
                 pickup.SetActive(false); 
