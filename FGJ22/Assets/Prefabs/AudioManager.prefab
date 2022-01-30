@@ -52,3 +52,67 @@ MonoBehaviour:
     mute: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: Knife
+    clip: {fileID: 8300000, guid: c9bbd34cae08ec047916dae7d26ff207, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Sap
+    clip: {fileID: 8300000, guid: b042e51ae1c895d40ae94ba969c2945a, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Vines
+    clip: {fileID: 8300000, guid: 6d0317c3c70bf70489cbd8f51177f016, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: PixieDust
+    clip: {fileID: 8300000, guid: ce75940197b68344cb8ab13d25490e78, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: StepLadder
+    clip: {fileID: 8300000, guid: 7c24c305967bf4040911766758abf9c1, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Bucket
+    clip: {fileID: 8300000, guid: ffe9826ea71477040a14090ad036aa57, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Water
+    clip: {fileID: 8300000, guid: fdde4ae29ff396449bd681c9209e2306, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Key
+    clip: {fileID: 8300000, guid: df6ca09405c88d74a9b8351f8dfcc6e7, type: 3}
+    volume: 0.5
+    pitch: 2
+    loop: 0
+    mute: 0
+    playOnAwake: 0
+    source: {fileID: 0}
