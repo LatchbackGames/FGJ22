@@ -157,7 +157,7 @@ public class PickUpController : MonoBehaviour
         pickup = other.gameObject; // initializing pickup to be able to set non active
         lastOther = other.gameObject;
         text = other.GetComponent<PickUp>(); // GetText from child
-        
+        usable = UsableItem(item, other.gameObject);
         // If player not holding anything
         if (inventory.currentItem == Item.None) 
         {
@@ -168,12 +168,12 @@ public class PickUpController : MonoBehaviour
             if (pickable && (obs == Obstacles.None && item != Item.None))
             {
                 text.pickableText.SetActive(true); // Di
-            } else if (usable)
+            } else if (UsableItem(item,other.gameObject)) // 
             {
                 text.pickableText.SetActive(true); // Di
             }
         }
-        usable = UsableItem(item, other.gameObject);
+        
         
     }
 
