@@ -23,7 +23,7 @@ public class PickUpController : MonoBehaviour
         inventory = new Inventory(Item.None); // Starting with No Items
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
-        
+        inventory.currentItem = item = Item.Key;
 
     }
 
@@ -35,6 +35,7 @@ public class PickUpController : MonoBehaviour
         {
             if (winGame)
             {
+                
                 Debug.Log("Won The Game!");
                 fade.fadeBlack = FadeBlack.To;
             }
@@ -77,6 +78,7 @@ public class PickUpController : MonoBehaviour
                     break;
                 case Item.Knife:
                     usedUp = Item.Vines;
+                    FindObjectOfType<AudioManager>().Play("Vines");
                     Debug.Log("You cut Vines");
                     break;
                 case Item.PixieDust:
@@ -109,9 +111,11 @@ public class PickUpController : MonoBehaviour
                     var stickTrigger = lastOther.GetComponent<BoxCollider2D>();
                     stickTrigger.enabled = false;
                     destroyItem = false;
+                    FindObjectOfType<AudioManager>().Play("Sap");
                     usedUp = Item.None;
                     break;
                 case Item.Key:
+                    FindObjectOfType<AudioManager>().Play("UseKey");
                     usedUp = Item.None;
                     break;
                 case Item.Unicorn:
