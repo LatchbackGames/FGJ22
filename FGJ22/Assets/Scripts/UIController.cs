@@ -59,4 +59,5 @@ public class UIController : MonoBehaviour
         else
             img.sprite = ItemList[selectedItem];
     }
+    
 }

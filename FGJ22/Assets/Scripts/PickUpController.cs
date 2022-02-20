@@ -23,7 +23,8 @@ public class PickUpController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = new Inventory(Item.None); // Starting with No Items
+        item = Item.Key;
+        inventory = new Inventory(item); // Starting with No Items
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
         Debug.Log(buttonPickUp.identifier);
@@ -35,12 +36,14 @@ public class PickUpController : MonoBehaviour
     void Update()
     {
         if (winGame)
+        {
             return;
+        }
+
         if ((Input.GetKey(KeyCode.E) || buttonPickUp.isDOWN)  && (usable || pickable))
         {
             if (winGame)
             {
-                
                 Debug.Log("Won The Game!");
                 fade.fadeBlack = FadeBlack.To;
             }
