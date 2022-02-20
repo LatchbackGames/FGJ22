@@ -1,5 +1,4 @@
 using System.Net.Mail;
-using TouchControlsKit;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour
@@ -18,32 +17,25 @@ public class PickUpController : MonoBehaviour
     public FadeToBlack fade;
 
     private GameObject lastOther;
-
-    public TCKButton buttonPickUp;
     // Start is called before the first frame update
     void Start()
     {
-        item = Item.Key;
-        inventory = new Inventory(item); // Starting with No Items
+        inventory = new Inventory(Item.None); // Starting with No Items
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
-        Debug.Log(buttonPickUp.identifier);
-        
-        //inventory.currentItem = item = Item.Key;
+        inventory.currentItem = item = Item.Vines; // Switch this for item
 
     }
 
     void Update()
     {
         if (winGame)
-        {
             return;
-        }
-
-        if ((Input.GetKey(KeyCode.E) || buttonPickUp.isDOWN)  && (usable || pickable))
+        if (Input.GetKey(KeyCode.E) && (usable || pickable))
         {
             if (winGame)
             {
+                
                 Debug.Log("Won The Game!");
                 fade.fadeBlack = FadeBlack.To;
             }
@@ -91,10 +83,12 @@ public class PickUpController : MonoBehaviour
                     break;
                 case Item.PixieDust:
                     usedUp = Item.None;
+                    FindObjectOfType<AudioManager>().Play("PixieDust");
                     Debug.Log("Moved heavy boulder");
                     break;
                 //TODO
                 case Item.Vines:
+                    FindObjectOfType<AudioManager>().Play("Sap");
                     usedUp = Item.StickyVines;
                     Debug.Log("StickyVines");
                     break;
