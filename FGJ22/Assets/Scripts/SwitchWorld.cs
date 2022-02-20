@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TouchControlsKit;
 using UnityEngine;
 
 public class SwitchWorld : MonoBehaviour
@@ -9,21 +10,26 @@ public class SwitchWorld : MonoBehaviour
     [HideInInspector]
     public bool CanWarp;
 
+    public TCKButton buttonSwitch;
+
     // Start is called before the first frame update
     void Start()
     {
         CanWarp = true;
         World2.SetActive(false);
         World1.SetActive(true);
+        Debug.Log(buttonSwitch.identifier);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.Tab)){
+        if (!Input.GetKeyDown(KeyCode.Tab) && !buttonSwitch.isCLICK){
             
             return;
         }
+
+
         if (!CanWarp)
         {
             Debug.Log("Can't warp!");

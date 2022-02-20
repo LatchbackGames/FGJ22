@@ -1,4 +1,5 @@
 using System.Net.Mail;
+using TouchControlsKit;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour
@@ -17,12 +18,16 @@ public class PickUpController : MonoBehaviour
     public FadeToBlack fade;
 
     private GameObject lastOther;
+
+    public TCKButton buttonPickUp;
     // Start is called before the first frame update
     void Start()
     {
         inventory = new Inventory(Item.None); // Starting with No Items
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
+        Debug.Log(buttonPickUp.identifier);
+        
         //inventory.currentItem = item = Item.Key;
 
     }
@@ -31,7 +36,7 @@ public class PickUpController : MonoBehaviour
     {
         if (winGame)
             return;
-        if (Input.GetKey(KeyCode.E) && (usable || pickable))
+        if ((Input.GetKey(KeyCode.E) || buttonPickUp.isDOWN)  && (usable || pickable))
         {
             if (winGame)
             {

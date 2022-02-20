@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TouchControlsKit;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -12,21 +13,31 @@ public class Movement : MonoBehaviour
     Vector2 movement;
     private float moveX = 1;
     private bool toggle;
+    public TCKJoystick joystick;
 
-    private void Start()
+    public void Start()
     {
-        
+        Debug.Log(joystick.identifier);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (joystick.enabled)
+        {
+            movement.x = joystick.axisX.value;
+            movement.y = joystick.axisY.value;
+        }
+        else
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
         
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
+        
         var x = movement.x;
         var y = movement.y;
+        
         
         
         
