@@ -1,4 +1,5 @@
 using System.Net.Mail;
+using TouchControlsKit;
 using UnityEngine;
 
 public class PickUpController : MonoBehaviour
@@ -14,6 +15,8 @@ public class PickUpController : MonoBehaviour
     [HideInInspector]
     public Inventory inventory;
 
+    private TCKButton interact;
+
     public FadeToBlack fade;
 
     private GameObject lastOther;
@@ -21,9 +24,11 @@ public class PickUpController : MonoBehaviour
     void Start()
     {
         inventory = new Inventory(Item.None); // Starting with No Items
+        interact = GameObject.Find("Interact").GetComponent<TCKButton>();
         // Find player and instantiate
         player = GameObject.FindWithTag("Player");
-        inventory.currentItem = item = Item.Vines; // Switch this for item
+        inventory.currentItem = item = Item.None; // Switch this for item
+        
 
     }
 
@@ -31,7 +36,7 @@ public class PickUpController : MonoBehaviour
     {
         if (winGame)
             return;
-        if (Input.GetKey(KeyCode.E) && (usable || pickable))
+        if ((Input.GetKey(KeyCode.E) || interact.isPRESSED) && (usable || pickable))
         {
             if (winGame)
             {

@@ -18,6 +18,7 @@ public class MenuController : MonoBehaviour
     private Button toggleTouch;
     private Button startTouch;
     private Camera camera;
+    private Button quit;
     void Start()
     {
         touchEnabled = false;
@@ -26,6 +27,8 @@ public class MenuController : MonoBehaviour
         menuEnabled = true;
         startTouch = GameObject.Find("StartGame").GetComponent<Button>();
         startTouch.onClick.AddListener(ToggleMenu);
+        quit = GameObject.Find("Quit").GetComponent<Button>();
+        quit.onClick.AddListener(CloseApplication);
     }
 
     // Update is called once per frame
@@ -67,5 +70,10 @@ public class MenuController : MonoBehaviour
     void ToggleMenu()
     {
         menuEnabled = !menuEnabled;
+    }
+
+    static void CloseApplication()
+    {
+        Application.Quit();
     }
 }
